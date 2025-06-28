@@ -77,7 +77,8 @@ const Footer = () => {
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-solar-400 mt-1 flex-shrink-0" />
-                <p>123 Solar Street, Green Energy Park,<br />Mumbai, Maharashtra 400001</p>
+                <p> SHOP NO. LGF-36 SHIVA PLAZA, NEAR ENGINEERING COLLEGE CHAURAHA,SECTOR E JANKIPURAM<br />
+                        LUCKNOW,UTTAR PRADESH 226021</p>
               </div>
             </div>
           </div>

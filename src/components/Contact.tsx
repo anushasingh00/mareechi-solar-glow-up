@@ -185,10 +185,9 @@ const Contact = () => {
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-2">Visit Us</h4>
                       <p className="text-gray-600">
-                        123 Solar Street, Green Energy Park,<br />
-                        Mumbai, Maharashtra 400001
+                        SHOP NO. LGF-36 SHIVA PLAZA, NEAR ENGINEERING COLLEGE CHAURAHA,SECTOR E JANKIPURAM<br />
+                        LUCKNOW,UTTAR PRADESH 226021
                       </p>
-                      <p className="text-sm text-gray-500 mt-1">Free parking available</p>
                     </div>
                   </div>
                 </CardContent>
