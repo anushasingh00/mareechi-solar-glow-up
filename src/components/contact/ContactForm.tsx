@@ -19,7 +19,7 @@ const ContactForm = () => {
   });
 
   // Set your WhatsApp number here (in international format, without + or spaces)
-  const whatsappNumber = '918765432109'; // Example: '918765432109' for +91 8765432109
+  const whatsappNumber = '918382909559'; // Example: '918382909559' for +91 8382909559
 
   const handleWhatsAppSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -89,7 +89,7 @@ const ContactForm = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="+91 8765432109"
+                placeholder="+91 8382909559"
                 required
                 className="h-12"
               />

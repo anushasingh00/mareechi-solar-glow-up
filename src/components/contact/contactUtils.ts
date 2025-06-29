@@ -22,7 +22,7 @@ Please provide me with a personalized solar energy quote. Thank you!`;
 };
 
 export const openWhatsApp = (message: string): void => {
-  const whatsappNumber = '+918765432109';
+  const whatsappNumber = '+918382909559';
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
   window.open(whatsappUrl, '_blank');
 };

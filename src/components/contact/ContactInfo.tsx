@@ -15,7 +15,7 @@ const ContactInfo = () => {
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Call Us</h4>
-                <p className="text-gray-600">+91 8765432109</p>
+                <p className="text-gray-600">+91 8382909559</p>
                 <p className="text-sm text-gray-500 mt-1">Mon-Sat: 9:00 AM - 7:00 PM</p>
               </div>
             </div>
