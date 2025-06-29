@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Sun, Phone, Mail } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 
 const Header = () => {
   const scrollToSection = (sectionId: string) => {
@@ -13,8 +12,12 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <Sun className="h-8 w-8 text-solar-600" />
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/e8b21ed1-0a94-494c-84db-a717cc5037ff.png" 
+              alt="Marechi Solar Logo" 
+              className="h-10 w-auto"
+            />
             <span className="text-2xl font-bold font-poppins text-gradient">
               Marechi Solar
             </span>
