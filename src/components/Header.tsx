@@ -19,7 +19,7 @@ const Header = () => {
               className="h-10 w-auto"
             />
             <span className="text-2xl font-bold font-poppins text-gradient">
-              Marechi Solar
+              Mareechi Solar
             </span>
           </div>
 
@@ -60,11 +60,11 @@ const Header = () => {
             <div className="hidden lg:flex items-center space-x-4 text-sm">
               <div className="flex items-center space-x-1 text-gray-600">
                 <Phone className="h-4 w-4" />
-                <span>+91 9876543210</span>
+                <span>+91 8765432109</span>
               </div>
               <div className="flex items-center space-x-1 text-gray-600">
                 <Mail className="h-4 w-4" />
-                <span>info@marechisolar.in</span>
+                <span>mareechisolar@gmail.com</span>
               </div>
             </div>
             <Button 

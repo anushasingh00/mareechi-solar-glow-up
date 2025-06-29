@@ -7,42 +7,36 @@ const Testimonials = () => {
   const testimonials = [
     {
       name: "Rajesh Kumar",
-      location: "Mumbai, Maharashtra",
       rating: 5,
-      text: "Marechi Solar transformed our home's energy consumption. Our electricity bill dropped from ₹8,000 to just ₹800 per month. The installation was professional and hassle-free. Highly recommended!",
+      text: "Mareechi Solar transformed our home's energy consumption. Our electricity bill dropped from ₹8,000 to just ₹800 per month. The installation was professional and hassle-free. Highly recommended!",
       savings: "₹7,200/month"
     },
     {
       name: "Priya Sharma",
-      location: "Delhi, NCR",
       rating: 5,
       text: "Amazing service from start to finish. The team was knowledgeable, punctual, and completed the installation in just 2 days. Our 5kW system is performing excellently even in Delhi's weather conditions.",
       savings: "₹5,500/month"
     },
     {
       name: "Suresh Patel",
-      location: "Ahmedabad, Gujarat",
       rating: 5,
       text: "Best decision we made for our factory. The commercial solar installation has reduced our operational costs significantly. The ROI is excellent and the maintenance service is top-notch.",
       savings: "₹25,000/month"
     },
     {
       name: "Anita Reddy",
-      location: "Hyderabad, Telangana",
       rating: 5,
       text: "The solar system has been running flawlessly for 2 years now. Great customer support and the monitoring app keeps us informed about our energy production. Very satisfied with the investment.",
       savings: "₹6,800/month"
     },
     {
       name: "Vikram Singh",
-      location: "Jaipur, Rajasthan",
       rating: 5,
       text: "Exceeded our expectations! The team handled everything from permits to grid connection. Our home now runs entirely on solar during the day, and we even sell excess power back to the grid.",
       savings: "₹9,200/month"
     },
     {
       name: "Deepa Nair",
-      location: "Kochi, Kerala",
       rating: 5,
       text: "Professional installation and excellent after-sales service. Despite Kerala's monsoon season, our solar panels perform consistently. The battery backup system works perfectly during power cuts.",
       savings: "₹4,500/month"
@@ -58,7 +52,7 @@ const Testimonials = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Don't just take our word for it. Here's what our satisfied customers across India 
-            have to say about their solar energy experience with Marechi Solar.
+            have to say about their solar energy experience with Mareechi Solar.
           </p>
         </div>
 

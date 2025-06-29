@@ -18,9 +18,11 @@ const ContactForm = () => {
     message: ''
   });
 
+  // Set your WhatsApp number here (in international format, without + or spaces)
+  const whatsappNumber = '918765432109'; // Example: '918765432109' for +91 8765432109
+
   const handleWhatsAppSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
     if (!validateRequiredFields(formData)) {
       toast({
         title: "Please fill all required fields",
@@ -29,10 +31,10 @@ const ContactForm = () => {
       });
       return;
     }
-
     const whatsappMessage = createWhatsAppMessage(formData);
-    openWhatsApp(whatsappMessage);
-    
+    // Redirect to WhatsApp with the specified number
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(url, '_blank');
     toast({
       title: "Opening WhatsApp...",
       description: "Your quote request will be sent via WhatsApp with all the details.",
@@ -87,7 +89,7 @@ const ContactForm = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="+91 9876543210"
+                placeholder="+91 8765432109"
                 required
                 className="h-12"
               />
@@ -145,15 +147,6 @@ const ContactForm = () => {
             >
               <MessageCircle className="mr-2 h-5 w-5" />
               Get Quote via WhatsApp
-            </Button>
-            <Button 
-              type="button"
-              onClick={handleSubmit}
-              variant="outline"
-              className="flex-1 border-2 border-solar-600 text-solar-600 hover:bg-solar-600 hover:text-white h-12 text-lg group"
-            >
-              Get Free Quote
-              <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
         </form>

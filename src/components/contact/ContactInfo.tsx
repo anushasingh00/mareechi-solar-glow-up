@@ -15,7 +15,6 @@ const ContactInfo = () => {
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Call Us</h4>
-                <p className="text-gray-600">+91 9876543210</p>
                 <p className="text-gray-600">+91 8765432109</p>
                 <p className="text-sm text-gray-500 mt-1">Mon-Sat: 9:00 AM - 7:00 PM</p>
               </div>
@@ -31,8 +30,7 @@ const ContactInfo = () => {
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Email Us</h4>
-                <p className="text-gray-600">info@marechisolar.in</p>
-                <p className="text-gray-600">sales@marechisolar.in</p>
+                <p className="text-gray-600">mareechisolar@gmail.com</p>
                 <p className="text-sm text-gray-500 mt-1">We'll respond within 2 hours</p>
               </div>
             </div>
@@ -74,11 +72,11 @@ const ContactInfo = () => {
       </div>
 
       <div className="bg-gradient-to-r from-solar-600 to-green-600 rounded-2xl p-8 text-white text-center">
-        <h3 className="text-2xl font-bold mb-4">Why Choose Marechi Solar?</h3>
+        <h3 className="text-2xl font-bold mb-4">Why Choose Mareechi Solar?</h3>
         <ul className="space-y-2 text-left">
           <li className="flex items-center">
             <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-            25+ years warranty on solar panels
+            10+ years warranty on solar panels
           </li>
           <li className="flex items-center">
             <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
@@ -87,10 +85,6 @@ const ContactInfo = () => {
           <li className="flex items-center">
             <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
             Professional installation & maintenance
-          </li>
-          <li className="flex items-center">
-            <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-            EMI options available
           </li>
         </ul>
       </div>
