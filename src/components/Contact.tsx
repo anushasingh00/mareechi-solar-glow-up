@@ -1,10 +1,9 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
-import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
@@ -16,6 +15,47 @@ const Contact = () => {
     location: '',
     message: ''
   });
+
+  const handleWhatsAppSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Check if required fields are filled
+    if (!formData.name || !formData.email || !formData.phone || !formData.location) {
+      toast({
+        title: "Please fill all required fields",
+        description: "Name, Email, Phone, and Location are required to send WhatsApp message.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // Create WhatsApp message
+    const whatsappMessage = `Hello! I'd like to get a free solar quote.
+
+*Contact Details:*
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Location: ${formData.location}
+
+${formData.message ? `*Additional Message:*\n${formData.message}` : ''}
+
+Please provide me with a personalized solar energy quote. Thank you!`;
+
+    // WhatsApp phone number (replace with actual business number)
+    const whatsappNumber = '+919876543210';
+    
+    // Create WhatsApp URL
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+    
+    toast({
+      title: "Opening WhatsApp...",
+      description: "Your quote request will be sent via WhatsApp with all the details.",
+    });
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -54,7 +94,7 @@ const Contact = () => {
             <Card className="border-0 shadow-lg">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleWhatsAppSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -130,13 +170,24 @@ const Contact = () => {
                     />
                   </div>
                   
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-gradient-to-r from-solar-600 to-green-600 hover:from-solar-700 hover:to-green-700 text-white h-12 text-lg group"
-                  >
-                    Get Free Quote
-                    <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button 
+                      type="submit" 
+                      className="flex-1 bg-green-500 hover:bg-green-600 text-white h-12 text-lg group"
+                    >
+                      <MessageCircle className="mr-2 h-5 w-5" />
+                      Get Quote via WhatsApp
+                    </Button>
+                    <Button 
+                      type="button"
+                      onClick={handleSubmit}
+                      variant="outline"
+                      className="flex-1 border-2 border-solar-600 text-solar-600 hover:bg-solar-600 hover:text-white h-12 text-lg group"
+                    >
+                      Get Free Quote
+                      <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </div>
                 </form>
               </CardContent>
             </Card>
